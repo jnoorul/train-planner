@@ -12,7 +12,7 @@ router.get('/instructions', (req, res) => {
 });
 
 router.post('/evaluate', (req, res) => {
-  res.send('request received');
+  res.json({ message: 'request received' });
 });
 
 module.exports = router;
