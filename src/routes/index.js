@@ -11,5 +11,8 @@ router.get('/instructions', (req, res) => {
   res.render('instructions');
 });
 
+router.post('/evaluate', (req, res) => {
+  res.send('request received');
+});
 
 module.exports = router;
