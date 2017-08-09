@@ -19,7 +19,7 @@ it('should evaluate test and return the score', () => {
 
   const mockStore = { getTestCases: () => mockTestCases };
 
-  const evaluator = getEvaluator('TrainPlanner', {runId: '123', teamUrl: 'www.abc.com'}, mockStore);
+  const evaluator = getEvaluator('TrainPlanner', { runId: '123', teamUrl: 'www.abc.com' }, mockStore);
   const results = evaluator.evaluate();
   expect(results).toEqual(
     {
