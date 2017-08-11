@@ -8,39 +8,35 @@ export default class TrainPlannerEvaluator {
     this.testCases = [];
   }
 
-  evaluate() {
-    this.executeTestCases();
-    return {
-      runId: this.runId,
-      score: this.score,
-      message: this.message,
-      testCases: this.testCases,
-    };
+  executeTest(input) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const output = { results: 100 };
+        resolve(output);
+      }, 1000);
+    });
   }
 
-  executeTestCases() {
+  async evaluate() {
     const testCases = this.testStore.getTestCases();
-    this.score = 100;
-    this.message = 'PASS';
-    this.testCases =
-      [
-        {
-          name: 'Number of trains to operate on green line',
-          status: 'PASS',
-        },
-        {
-          name: 'Number of trains to operate on green line',
-          status: 'PASS',
-        },
-        {
-          name: 'Number of trains to operate on green line',
-          status: 'PASS',
-        },
-        {
-          name: 'Number of trains to operate on green line',
-          status: 'PASS',
-        },
-      ];
+
+    let totalScore = 0;
+    const testCasesOutput = [];
+
+    for (let i = 0; i < testCases.length; i += 1){
+      let output = await this.executeTest(testCases[i].input);
+      // compare output against expected output.
+      testCasesOutput.push({ name: testCases[i].name,
+        status: 'PASS', score: testCases[i].score });
+      totalScore += testCases[i].score;
+    }
+
+    return {
+      message: 'PASS',
+      runId: this.runId,
+      score: totalScore,
+      testCases: testCasesOutput,
+    };
   }
 }
 
