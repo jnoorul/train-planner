@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../src/app';
+import app from '../../app';
 
 it('evaluate end point should return status code 200', async () => {
   const res = await request(app).post('/trainPlanner/evaluate')
