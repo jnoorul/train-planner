@@ -18,7 +18,7 @@ export default class TrainPlannerEvaluator {
   }
 
   async evaluate() {
-    const testCases = this.testStore.getTestCases();
+    const testCases = await this.testStore.getTestCases('TrainPlanner');
 
     let totalScore = 0;
     const testCasesOutput = [];

@@ -10,8 +10,8 @@ it('evaluate end point should return status code 200', async () => {
     });
   expect(res.statusCode).toBe(200);
   expect(res.body.message).toBe('PASS');
-  expect(res.body.score).toBe(100);
-  expect(res.body.testCases.length).toBe(4);
+  expect(res.body.score).toBe(10);
+  expect(res.body.testCases.length).toBe(1);
 });
 
 it('evaluate should return 400 if input payload is empty', async () => {

@@ -18,7 +18,9 @@ router.post('/evaluate', (req, res) => {
   const errors = validateRequest(req);
   if (errors.length === 0) {
     const evaluator = getEvaluator('TrainPlanner', req.body, new TestStore());
-    res.json(evaluator.evaluate());
+    evaluator.evaluate().then((results) => {
+      res.json(results);
+    });
   } else {
     res.statusCode = '400';
     res.json({ errors });
