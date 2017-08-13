@@ -1,0 +1,64 @@
+{  
+   "score":1,
+   "input":[  
+      {  
+         "Punggol":{  
+            "population":25,
+            "connections":[  
+               "Sengkang"
+            ]
+         },
+         "Serangoon":{  
+            "population":48,
+            "connections":[  
+               "Kovan",
+               "Woodleigh"
+            ]
+         },
+         "Sengkang":{  
+            "population":73,
+            "connections":[  
+               "Punggol",
+               "Serangoon"
+            ]
+         },
+         "Woodleigh":{  
+            "population":21,
+            "connections":[  
+               "Serangoon",
+               "Dhoby Ghaut"
+            ]
+         },
+         "Dhoby Ghaut":{  
+            "population":100,
+            "connections":[  
+               "Woodleigh",
+               "City Hall"
+            ]
+         },
+         "City Hall":{  
+            "population":30,
+            "connections":[  
+               "Dhoby Ghaut",
+               "Raffles Place",
+               "Pasir Ris"
+            ]
+         },
+         "Raffles Place":{  
+            "population":55,
+            "connections":[  
+               "City Hall"
+            ]
+         },
+         "Pasir Ris":{  
+            "population":12,
+            "connections":[  
+               "City Hall"
+            ]
+         }
+      }
+   ],
+   "output":[  
+      364
+   ]
+}
