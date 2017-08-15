@@ -19,8 +19,11 @@ router.post('/evaluate', (req, res) => {
   if (errors.length === 0) {
     const evaluator = getEvaluator('TrainPlanner', req.body, new TestStore());
     evaluator.evaluate().then((results) => {
-      res.json(results);
+      // do a call back to coordinator
+      // eslint-disable-next-line no-console
+      console.log(results);
     });
+    res.json('request received');
   } else {
     res.statusCode = '400';
     res.json({ errors });

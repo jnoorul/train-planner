@@ -9,9 +9,7 @@ it('evaluate end point should return status code 200', async () => {
       callbackUrl: 'http://coordinator.com/result',
     });
   expect(res.statusCode).toBe(200);
-  expect(res.body.message).toBe('PASS');
-  expect(res.body.score).toBe(10);
-  expect(res.body.testCases.length).toBe(1);
+  expect(res.body).toBe('request received');
 });
 
 it('evaluate should return 400 if input payload is empty', async () => {
