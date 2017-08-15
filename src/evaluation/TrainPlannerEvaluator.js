@@ -12,6 +12,24 @@ export default class TrainPlannerEvaluator {
     this.testCases = [];
   }
 
+  getOverAllStatus(testCasesOutput){
+    const totalTests = testCasesOutput.length;
+    let numOfFailures = 0;
+
+    testCasesOutput.forEach((test) => {
+      if (test.status === 'FAIL') {
+        numOfFailures += 1;
+      }
+    });
+
+    if (numOfFailures === 0) {
+      return 'SUCCESS';
+    } else if (numOfFailures === totalTests) {
+      return 'FAILURE';
+    }
+    return 'PARTIAL SUCCESS';
+  }
+
   async evaluate() {
     const testCases = await this.testStore.getTestCases('TrainPlanner');
 
@@ -33,7 +51,7 @@ export default class TrainPlannerEvaluator {
     }
 
     return {
-      message: 'PASS',
+      message: this.getOverAllStatus(testCasesOutput),
       runId: this.runId,
       score: totalScore,
       testCases: testCasesOutput,
