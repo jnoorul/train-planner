@@ -19,7 +19,7 @@ router.post('/evaluate', (req, res) => {
   if (errors.length === 0) {
     const evaluator = getEvaluator('TrainPlanner', req.body, new TestStore());
     evaluator.evaluate().then((results) => {
-      // do a call back to coordinator
+      evaluator.postEvaluationResults(results);
       // eslint-disable-next-line no-console
       console.log(results);
     });

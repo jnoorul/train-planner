@@ -1,11 +1,13 @@
 import { isEqual } from 'lodash';
 import execute from '../service/trainPlannerService';
+import postResults from '../service/coordinatorService';
 
 
 export default class TrainPlannerEvaluator {
-  constructor(runId, teamUrl, testStore) {
+  constructor(runId, teamUrl, callbackUrl, testStore) {
     this.runId = runId;
     this.teamUrl = teamUrl;
+    this.callbackUrl = callbackUrl;
     this.testStore = testStore;
     this.score = 0;
     this.message = '';
@@ -28,6 +30,10 @@ export default class TrainPlannerEvaluator {
       return 'FAILURE';
     }
     return 'PARTIAL SUCCESS';
+  }
+
+  async postEvaluationResults(results) {
+    return postResults(this.callbackUrl, results);
   }
 
   async evaluate() {
