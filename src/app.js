@@ -1,3 +1,5 @@
+import 'babel-register';
+import 'babel-polyfill';
 import express from 'express';
 import path from 'path';
 import logger from 'morgan';

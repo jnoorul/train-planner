@@ -3,12 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "eslint src/** && babel src -d dist",
-    "start": "node ./bin/www",
+    "prestart": "babel src -d dist",
+    "start": "node server.js",
     "lint": "eslint src/ --cache",
     "test": "jest"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
