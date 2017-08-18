@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "body-parser": "~1.17.1",
