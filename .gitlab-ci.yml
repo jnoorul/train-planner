@@ -1,0 +1,26 @@
+image: node:8
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - npm install
+  only:
+    - master
+
+test:
+  stage: test
+  script:
+    - npm test
+
+deploy:
+  stage: deploy
+  script:
+    - apt-get update -yq
+    - apt-get install rubygems ruby-dev -y
+    - gem install dpl
+    - dpl --provider=heroku --app=cis2017-train-planner --api-key=e74a074a-2d25-4ea4-ac75-90a5ac739f89
