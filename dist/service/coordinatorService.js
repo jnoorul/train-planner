@@ -15,7 +15,11 @@ exports.default = function () {
         switch (_context.prev = _context.next) {
           case 0:
             return _context.abrupt('return', fetch(url, {
-              method: 'post',
+              headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+              },
+              method: 'POST',
               body: JSON.stringify(results)
             }));
 

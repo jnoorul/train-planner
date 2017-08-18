@@ -33,6 +33,9 @@ export default class TrainPlannerEvaluator {
   }
 
   async postEvaluationResults(results) {
+    console.log('evaluation complete. posting results back to coordinator');
+    console.log(`callback url ${this.callbackUrl}`);
+    console.log(`results ${JSON.stringify(results)}`);
     return postResults(this.callbackUrl, results);
   }
 

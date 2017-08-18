@@ -62,9 +62,12 @@ var TrainPlannerEvaluator = function () {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
+                console.log('evaluation complete. posting results back to coordinator');
+                console.log('callback url ' + this.callbackUrl);
+                console.log('results ' + JSON.stringify(results));
                 return _context.abrupt('return', (0, _coordinatorService2.default)(this.callbackUrl, results));
 
-              case 1:
+              case 4:
               case 'end':
                 return _context.stop();
             }
