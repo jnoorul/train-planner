@@ -11,11 +11,6 @@ build:
   only:
     - master
 
-test:
-  stage: test
-  script:
-    - npm test
-
 deploy:
   stage: deploy
   script:
