@@ -32,9 +32,9 @@ it('should return overall status as PASS if all the individual tests passed', as
   const results = await evaluator.evaluate();
   expect(results).toEqual(
     {
-      message: 'SUCCESS',
+      message: 'PASS',
       runId: '123',
-      score: 30,
+      score: '30',
       testCases: [{
         name: 'test case 1',
         status: 'PASS',
@@ -81,7 +81,7 @@ it('should return overall status as PARTIAL SUCCESS if some of the tests failed'
     {
       message: 'PARTIAL SUCCESS',
       runId: '123',
-      score: 10,
+      score: '10',
       testCases: [{
         name: 'test case 1',
         status: 'PASS',
@@ -126,9 +126,9 @@ it('should return overall status as FAILURE if all the tests failed', async () =
   const results = await evaluator.evaluate();
   expect(results).toEqual(
     {
-      message: 'FAILURE',
+      message: 'FAIL',
       runId: '123',
-      score: 0,
+      score: '0',
       testCases: [{
         name: 'test case 1',
         status: 'FAIL',
@@ -149,26 +149,20 @@ it('should send the results back to coordinator once evaluate is complete', asyn
     {
       name: 'test case 1',
       input: { id: 1 },
-      output: { numberOfTrains: {
-        greenLine: 5,
-        redLine: 2,
-      } },
+      output: { busiestRoute: { route: 1, numOfPassengers: 100 } },
       score: 10,
     },
     {
       name: 'test case 2',
       input: { id: 2 },
-      output: { numberOfTrains: {
-        greenLine: 3,
-        redLine: 1,
-      } },
+      output: { busiestRoute: { route: 1, numOfPassengers: 100 } },
       score: 20,
     },
   ];
 
   const mockStore = { getTestCases: () => mockTestCases };
   const evaluator = getEvaluator('TrainPlanner',
-    { runId: '123', teamUrl: 'www.abc.com' }, mockStore);
+    { runId: '123', teamUrl: 'https://cis2017-team-node.herokuapp.com/trainPlanner' }, mockStore);
 
   const results = await evaluator.evaluate();
   const postResults = await evaluator.postEvaluationResults(results);

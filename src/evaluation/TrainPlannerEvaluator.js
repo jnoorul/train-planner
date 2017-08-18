@@ -25,9 +25,9 @@ export default class TrainPlannerEvaluator {
     });
 
     if (numOfFailures === 0) {
-      return 'SUCCESS';
+      return 'PASS';
     } else if (numOfFailures === totalTests) {
-      return 'FAILURE';
+      return 'FAIL';
     }
     return 'PARTIAL SUCCESS';
   }
@@ -58,8 +58,8 @@ export default class TrainPlannerEvaluator {
 
     return {
       message: this.getOverAllStatus(testCasesOutput),
-      runId: this.runId,
-      score: totalScore,
+      runId: this.runId.toString(),
+      score: totalScore.toString(),
       testCases: testCasesOutput,
     };
   }
