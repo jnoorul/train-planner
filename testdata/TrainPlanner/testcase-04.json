@@ -1,0 +1,6 @@
+{
+  "name": "test case 4",
+  "input": { "a": [1,2,3], "b": [3,2,1]},
+  "output":{"busiestRoute": {"route": 1, "numOfPassengers": 200}},
+  "score": 25
+}
