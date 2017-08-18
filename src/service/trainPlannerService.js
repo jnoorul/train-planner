@@ -1,7 +1,8 @@
 import 'isomorphic-fetch';
 
 export default async function execute(url, input) {
-  const response = await fetch(url, {
+  const problemUrl = url + '/trainPlanner';
+  const response = await fetch(problemUrl, {
     method: 'post',
     body: JSON.stringify(input),
   });
