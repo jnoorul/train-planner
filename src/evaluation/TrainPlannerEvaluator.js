@@ -46,13 +46,18 @@ export default class TrainPlannerEvaluator {
     const testCasesOutput = [];
 
     for (let i = 0; i < testCases.length; i += 1){
-      const output = await execute(this.teamUrl, testCases[i].input);
       const result = { name: testCases[i].name };
-      if (isEqual(output, testCases[i].output)) {
-        result.status = 'PASS';
-        result.score = testCases[i].score;
-        totalScore += testCases[i].score;
-      } else {
+      try {
+        const output = await execute(this.teamUrl, testCases[i].input);
+        if (isEqual(output, testCases[i].output)) {
+          result.status = 'PASS';
+          result.score = testCases[i].score;
+          totalScore += testCases[i].score;
+        } else {
+          result.status = 'FAIL';
+          result.score = 0;
+        }
+      } catch (err) {
         result.status = 'FAIL';
         result.score = 0;
       }

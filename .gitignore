@@ -62,4 +62,6 @@ typings/
 #idea directory
 .idea
 
+#dist directory
+dist
 

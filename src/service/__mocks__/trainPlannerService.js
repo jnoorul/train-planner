@@ -12,6 +12,10 @@ function getMockOutput(input) {
       redLine: 1,
     } };
   }
+
+  if (input.id === 3) {
+    throw new Error('internal server error');
+  }
   return {};
 }
 
