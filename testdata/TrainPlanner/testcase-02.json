@@ -1,6 +1,143 @@
 {
-  "name": "test case 2",
-  "input": { "a": [1,2,3], "b": [3,2,1]},
-  "output":{"busiestRoute": {"route": 1, "numOfPassengers": 100}},
-  "score": 20
+  "name": "SimpleRouteMap-2",
+  "input": {
+    "destination": "DhobyGhaut",
+    "stations": [
+      {
+        "name": "Punggol",
+        "passengers": 80,
+        "connectedStations": [
+          "Sengkang"
+        ],
+        "lines": [
+          "purple"
+        ]
+      },
+      {
+        "name": "Sengkang",
+        "passengers": 40,
+        "connectedStations": [
+          "Punggol",
+          "Serangoon"
+        ],
+        "lines": [
+          "purple"
+        ]
+      },
+      {
+        "name": "Serangoon",
+        "passengers": 40,
+        "connectedStations": [
+          "Sengkang",
+          "DhobyGhaut",
+          "PayaLebar",
+          "Bishan"
+        ],
+        "lines": [
+          "purple",
+          "circle"
+        ]
+      },
+      {
+        "name": "DhobyGhaut",
+        "passengers": 20,
+        "connectedStations": [
+          "Serangoon",
+          "HarbourFront",
+          "MarinaBay",
+          "Orchard",
+          "PayaLebar"
+        ],
+        "lines": [
+          "purple",
+          "red",
+          "circle"
+        ]
+      },
+      {
+        "name": "HarbourFront",
+        "passengers": 90,
+        "connectedStations": [
+          "DhobyGhaut"
+        ],
+        "lines": [
+          "purple"
+        ]
+      },
+      {
+        "name": "Orchard",
+        "passengers": 30,
+        "connectedStations": [
+          "DhobyGhaut",
+          "Novena"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+      {
+        "name": "Novena",
+        "passengers": 200,
+        "connectedStations": [
+          "Orchard",
+          "Bishan"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+      {
+        "name": "Bishan",
+        "passengers": 20,
+        "connectedStations": [
+          "Woodlands",
+          "Novena",
+          "Serangoon"
+        ],
+        "lines": [
+          "red",
+          "circle"
+        ]
+      },
+      {
+        "name": "Woodlands",
+        "passengers": 40,
+        "connectedStations": [
+          "Bishan"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+      {
+        "name": "MarinaBay",
+        "passengers": 100,
+        "connectedStations": [
+          "DhobyGhaut"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+      {
+        "name": "PayaLebar",
+        "passengers": 75,
+        "connectedStations": [
+          "DhobyGhaut",
+          "Serangoon"
+        ],
+        "lines": [
+          "circle"
+        ]
+      }
+    ]
+  },
+  "output": {
+    "busiestRoute": {
+      "line": "red",
+      "totalNumOfPassengers": 230,
+      "reachingVia": "Orchard"
+    }
+  },
+  "score": 25
 }
