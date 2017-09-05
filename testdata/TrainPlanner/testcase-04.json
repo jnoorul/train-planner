@@ -1,11 +1,12 @@
 {
-  "name": "ComplexRouteMap",
+  "name": "SimpleRouteMap",
+  "groupId": 4,
   "input": {
     "destination": "DhobyGhaut",
     "stations": [
       {
         "name": "Punggol",
-        "passengers": 80,
+        "passengers": 40,
         "connectedStations": [
           "Sengkang"
         ],
@@ -101,7 +102,7 @@
       },
       {
         "name": "Woodlands",
-        "passengers": 40,
+        "passengers": 20,
         "connectedStations": [
           "Bishan"
         ],
@@ -121,7 +122,7 @@
       },
       {
         "name": "PayaLebar",
-        "passengers": 275,
+        "passengers": 75,
         "connectedStations": [
           "DhobyGhaut",
           "Serangoon"
@@ -134,10 +135,10 @@
   },
   "output": {
     "busiestRoute": {
-      "line": "circle",
-      "totalNumOfPassengers": 275,
-      "reachingVia": "PayaLebar"
+      "line": "purple",
+      "totalNumOfPassengers": 160,
+      "reachingVia": "Serangoon"
     }
   },
-  "score": 40
+  "score": 25
 }

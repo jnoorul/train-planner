@@ -1,6 +1,6 @@
 {
-  "name": "SimpleRouteMap",
-  "groupId": 2,
+  "name": "ComplexRouteMap",
+  "groupId": 4,
   "input": {
     "destination": "DhobyGhaut",
     "stations": [
@@ -78,7 +78,7 @@
       },
       {
         "name": "Novena",
-        "passengers": 200,
+        "passengers": 10,
         "connectedStations": [
           "Orchard",
           "Bishan"
@@ -122,7 +122,7 @@
       },
       {
         "name": "PayaLebar",
-        "passengers": 75,
+        "passengers": 275,
         "connectedStations": [
           "DhobyGhaut",
           "Serangoon"
@@ -135,10 +135,10 @@
   },
   "output": {
     "busiestRoute": {
-      "line": "red",
-      "totalNumOfPassengers": 230,
-      "reachingVia": "Orchard"
+      "line": "circle",
+      "totalNumOfPassengers": 275,
+      "reachingVia": "PayaLebar"
     }
   },
-  "score": 25
+  "score": 40
 }

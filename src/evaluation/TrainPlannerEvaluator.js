@@ -32,6 +32,12 @@ export default class TrainPlannerEvaluator {
     return 'PARTIAL SUCCESS';
   }
 
+  static getRandomIntInclusive(from, to) {
+    const min = Math.ceil(from);
+    const max = Math.floor(to);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   async postEvaluationResults(results) {
     console.log('evaluation complete. posting results back to coordinator');
     console.log(`callback url ${this.callbackUrl}`);
@@ -44,24 +50,27 @@ export default class TrainPlannerEvaluator {
 
     let totalScore = 0;
     const testCasesOutput = [];
+    const randomNumber = TrainPlannerEvaluator.getRandomIntInclusive(1, 4);
 
-    for (let i = 0; i < testCases.length; i += 1){
-      const result = { name: testCases[i].name };
-      try {
-        const output = await execute(this.teamUrl, testCases[i].input);
-        if (isEqual(output, testCases[i].output)) {
-          result.status = 'PASS';
-          result.score = testCases[i].score;
-          totalScore += testCases[i].score;
-        } else {
+    for (let i = 0; i < testCases.length; i += 1) {
+      if (testCases[i].groupId === randomNumber) {
+        const result = { name: testCases[i].name };
+        try {
+          const output = await execute(this.teamUrl, testCases[i].input);
+          if (isEqual(output, testCases[i].output)) {
+            result.status = 'PASS';
+            result.score = testCases[i].score;
+            totalScore += testCases[i].score;
+          } else {
+            result.status = 'FAIL';
+            result.score = 0;
+          }
+        } catch (err) {
           result.status = 'FAIL';
           result.score = 0;
         }
-      } catch (err) {
-        result.status = 'FAIL';
-        result.score = 0;
+        testCasesOutput.push(result);
       }
-      testCasesOutput.push(result);
     }
 
     return {
