@@ -2,7 +2,7 @@ import request from 'supertest';
 import app from '../../app';
 
 it('evaluate end point should return status code 200', async () => {
-  const res = await request(app).post('/trainPlanner/evaluate')
+  const res = await request(app).post('/evaluate')
     .send({
       runId: '123456',
       teamUrl: 'http://www.abc.heroku.com/sorting',
@@ -13,7 +13,7 @@ it('evaluate end point should return status code 200', async () => {
 });
 
 it('evaluate should return 400 if input payload is empty', async () => {
-  const res = await request(app).post('/trainPlanner/evaluate');
+  const res = await request(app).post('/evaluate');
 
   expect(res.statusCode).toBe(400);
   expect(res.body.errors.length).toBe(3);
@@ -23,7 +23,7 @@ it('evaluate should return 400 if input payload is empty', async () => {
 });
 
 it('evaluate should return 400 if teamUrl is not empty', async () => {
-  const res = await request(app).post('/trainPlanner/evaluate')
+  const res = await request(app).post('/evaluate')
     .send({
       runId: '123456',
       teamUrl: '',
@@ -36,7 +36,7 @@ it('evaluate should return 400 if teamUrl is not empty', async () => {
 });
 
 it('evaluate should return 400 if teamUrl is not empty', async () => {
-  const res = await request(app).post('/trainPlanner/evaluate')
+  const res = await request(app).post('/evaluate')
     .send({
       runId: '123456',
       teamUrl: 'http://www.abc.heroku.com/sorting',
