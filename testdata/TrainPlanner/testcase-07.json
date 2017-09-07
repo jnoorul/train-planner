@@ -16,7 +16,7 @@
       },
       {
         "name": "Sengkang",
-        "passengers": 40,
+        "passengers": 0,
         "connectedStations": [
           "Punggol",
           "Serangoon"
@@ -30,7 +30,7 @@
         "passengers": 40,
         "connectedStations": [
           "Sengkang",
-          "DhobyGhaut",
+          "LittleIndia",
           "PayaLebar",
           "Bishan"
         ],
@@ -40,10 +40,21 @@
         ]
       },
       {
+        "name": "LittleIndia",
+        "passengers": 40,
+        "connectedStations": [
+          "Serangoon",
+          "DhobyGhaut"
+        ],
+        "lines": [
+          "purple"
+        ]
+      },
+      {
         "name": "DhobyGhaut",
         "passengers": 20,
         "connectedStations": [
-          "Serangoon",
+          "LittleIndia",
           "HarbourFront",
           "MarinaBay",
           "Orchard",
@@ -122,7 +133,7 @@
       },
       {
         "name": "PayaLebar",
-        "passengers": 275,
+        "passengers": 75,
         "connectedStations": [
           "DhobyGhaut",
           "Serangoon"
@@ -135,9 +146,9 @@
   },
   "output": {
     "busiestRoute": {
-      "line": "circle",
-      "totalNumOfPassengers": 275,
-      "reachingVia": "PayaLebar"
+      "line": "purple",
+      "totalNumOfPassengers": 220,
+      "reachingVia": "LittleIndia"
     }
   },
   "score": 20

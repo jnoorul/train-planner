@@ -30,7 +30,7 @@
         "passengers": 40,
         "connectedStations": [
           "Sengkang",
-          "DhobyGhaut",
+          "LittleIndia",
           "PayaLebar",
           "Bishan"
         ],
@@ -40,10 +40,21 @@
         ]
       },
       {
+        "name": "LittleIndia",
+        "passengers": 40,
+        "connectedStations": [
+          "Serangoon",
+          "DhobyGhaut"
+        ],
+        "lines": [
+          "purple"
+        ]
+      },
+      {
         "name": "DhobyGhaut",
         "passengers": 20,
         "connectedStations": [
-          "Serangoon",
+          "LittleIndia",
           "HarbourFront",
           "MarinaBay",
           "Orchard",
@@ -67,7 +78,7 @@
       },
       {
         "name": "Orchard",
-        "passengers": 30,
+        "passengers": 150,
         "connectedStations": [
           "DhobyGhaut",
           "Novena"
@@ -78,7 +89,7 @@
       },
       {
         "name": "Novena",
-        "passengers": 200,
+        "passengers": 150,
         "connectedStations": [
           "Orchard",
           "Bishan"
@@ -136,7 +147,7 @@
   "output": {
     "busiestRoute": {
       "line": "red",
-      "totalNumOfPassengers": 230,
+      "totalNumOfPassengers": 300,
       "reachingVia": "Orchard"
     }
   },
