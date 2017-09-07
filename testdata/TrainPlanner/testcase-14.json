@@ -1,6 +1,6 @@
 {
   "name": "ComplexRouteMap",
-  "groupId": 4,
+  "groupId": 6,
   "input": {
     "destination": "DhobyGhaut",
     "stations": [

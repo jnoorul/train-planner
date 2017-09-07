@@ -32,10 +32,19 @@ export default class TrainPlannerEvaluator {
     return 'PARTIAL SUCCESS';
   }
 
-  static getRandomIntInclusive(from, to) {
+  static getRandomInt(from, to) {
     const min = Math.ceil(from);
     const max = Math.floor(to);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  static generatePairOfRandomInt(from, to) {
+    const first = TrainPlannerEvaluator.getRandomInt(from, to);
+    let second = TrainPlannerEvaluator.getRandomInt(from, to);
+    while (first === second) {
+      second = TrainPlannerEvaluator.getRandomInt(from, to);
+    }
+    return [first, second];
   }
 
   async postEvaluationResults(results) {
@@ -50,10 +59,10 @@ export default class TrainPlannerEvaluator {
 
     let totalScore = 0;
     const testCasesOutput = [];
-    const randomNumber = TrainPlannerEvaluator.getRandomIntInclusive(1, 4);
+    const randomNumbers = TrainPlannerEvaluator.generatePairOfRandomInt(1, 8);
 
     for (let i = 0; i < testCases.length; i += 1) {
-      if (testCases[i].groupId === randomNumber) {
+      if (randomNumbers.includes(testCases[i].groupId)) {
         const result = { name: testCases[i].name };
         try {
           const output = await execute(this.teamUrl, testCases[i].input);

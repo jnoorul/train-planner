@@ -1,6 +1,6 @@
 {
   "name": "SimpleRouteMap",
-  "groupId": 1,
+  "groupId": 5,
   "input": {
     "destination": "DhobyGhaut",
     "stations": [
