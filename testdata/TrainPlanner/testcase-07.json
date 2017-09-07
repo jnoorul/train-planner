@@ -1,5 +1,5 @@
 {
-  "name": "ComplexRouteMap",
+  "name": "SimpleRouteMap",
   "groupId": 3,
   "input": {
     "destination": "DhobyGhaut",
