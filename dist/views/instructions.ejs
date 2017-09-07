@@ -21,84 +21,84 @@
     <p>From source to destination, if there are more than one route to choose, passenger will always choose the shortest route (in terms of number of stations in between) and there will always be only one shortest route to reach the destination.</p>
     <h2 id="sample-input:"><a class="header-link" href="#sample-input:"></a>Sample Input:</h2>
     <p>{</p>
-    <pre class="hljs"><code>            <span class="hljs-attribute">destination</span>: 'DhobyGhaut',
+    <pre class="hljs"><code>            <span class="hljs-attribute">"destination"</span>: "DhobyGhaut",
 
-<span class="http">            <span class="hljs-attribute">stations</span>: [{
+<span class="http">            <span class="hljs-attribute">"stations"</span>: [{
 
-<span class="less">                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Punggol'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">80</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Sengkang'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'purple'</span>]
+<span class="less">                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Punggol"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">80</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Sengkang"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"purple"</span>]
                             }, {
 
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Sengkang'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">40</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Punggol'</span>,<span class="hljs-string">'Serangoon'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'purple'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Sengkang"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">40</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Punggol"</span>,<span class="hljs-string">"Serangoon"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"purple"</span>]
                             }, {
 
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Serangoon'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">40</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Sengkang'</span>, <span class="hljs-string">'DhobyGhaut'</span>, <span class="hljs-string">'PayaLebar'</span>, <span class="hljs-string">'Bishan'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'purple'</span>, <span class="hljs-string">'circle'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Serangoon"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">40</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Sengkang"</span>, <span class="hljs-string">"DhobyGhaut"</span>, <span class="hljs-string">"PayaLebar"</span>, <span class="hljs-string">"Bishan"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"purple"</span>, <span class="hljs-string">"circle"</span>]
                             } {
 
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'DhobyGhaut'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">20</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Serangoon'</span>, <span class="hljs-string">'HarbourFront'</span>, <span class="hljs-string">'MarinaBay'</span>, <span class="hljs-string">'Orchard'</span>, <span class="hljs-string">'PayaLebar'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'purple'</span>, <span class="hljs-string">'red'</span>, <span class="hljs-string">'circle'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"DhobyGhaut"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">20</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Serangoon"</span>, <span class="hljs-string">"HarbourFront"</span>, <span class="hljs-string">"MarinaBay"</span>, <span class="hljs-string">"Orchard"</span>, <span class="hljs-string">"PayaLebar"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"purple"</span>, <span class="hljs-string">"red"</span>, <span class="hljs-string">"circle"</span>]
 
                             }, {
 
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'HarbourFront'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">90</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'DhobyGhaut'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'purple'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"HarbourFront"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">90</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"DhobyGhaut"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"purple"</span>]
 
                             }, {
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Orchard'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">30</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'DhobyGhaut'</span>, <span class="hljs-string">'Novena'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'red'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Orchard"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">30</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"DhobyGhaut"</span>, <span class="hljs-string">"Novena"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"red"</span>]
 
                             },{
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Novena'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">10</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Orchard'</span>, <span class="hljs-string">'Bishan'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'red'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Novena"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">10</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Orchard"</span>, <span class="hljs-string">"Bishan"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"red"</span>]
 
                             }
                             {
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Bishan'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">20</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Woodlands'</span>, <span class="hljs-string">'Novena'</span>, <span class="hljs-string">'Serangoon'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'red'</span>,<span class="hljs-string">'circle'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Bishan"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">20</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Woodlands"</span>, <span class="hljs-string">"Novena"</span>, <span class="hljs-string">"Serangoon"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"red"</span>,<span class="hljs-string">"circle"</span>]
 
                             }
                             {
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'Woodlands'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">40</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'Bishan'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'red'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"Woodlands"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">40</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"Bishan"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"red"</span>]
 
                             }, {
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'MarinaBay'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">100</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'DhobyGhaut'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'red'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"MarinaBay"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">100</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"DhobyGhaut"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"red"</span>]
                             },
                             {
-                                            <span class="hljs-attribute">name</span>: <span class="hljs-string">'PayaLebar'</span>,
-                                            <span class="hljs-attribute">passengers</span>: <span class="hljs-number">75</span>,
-                                            <span class="hljs-attribute">connectedStations</span>: [<span class="hljs-string">'DhobyGhaut'</span>,<span class="hljs-string">'Serangoon'</span>],
-                                            <span class="hljs-attribute">lines</span>: [<span class="hljs-string">'circle'</span>]
+                                            <span class="hljs-attribute">"name"</span>: <span class="hljs-string">"PayaLebar"</span>,
+                                            <span class="hljs-attribute">"passengers"</span>: <span class="hljs-number">75</span>,
+                                            <span class="hljs-attribute">"connectedStations"</span>: [<span class="hljs-string">"DhobyGhaut"</span>,<span class="hljs-string">"Serangoon"</span>],
+                                            <span class="hljs-attribute">"lines"</span>: [<span class="hljs-string">"circle"</span>]
                             }
             ]</span></span></code></pre><p>}</p>
     <h2 id="sample-output:"><a class="header-link" href="#sample-output:"></a>Sample Output:</h2>
     <p>{</p>
-    <pre class="hljs"><code>            <span class="hljs-attribute">line</span>: <span class="hljs-string">'purple'</span>,
-            <span class="hljs-attribute">totalNumOfPassengers</span>: <span class="hljs-number">220</span>,
-            <span class="hljs-attribute">reachingVia</span>: <span class="hljs-string">'Serangoon'</span>             </code></pre><p>}</p>
+    <pre class="hljs"><code>            <span class="hljs-attribute">"line"</span>: <span class="hljs-string">"purple"</span>,
+            <span class="hljs-attribute">"totalNumOfPassengers"</span>: <span class="hljs-number">220</span>,
+            <span class="hljs-attribute">"reachingVia"</span>: <span class="hljs-string">"Serangoon"</span>             </code></pre><p>}</p>
 </article>
 </body>
 </html>
