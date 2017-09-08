@@ -145,11 +145,9 @@
     ]
   },
   "output": {
-    "busiestRoute": {
-      "line": "red",
-      "totalNumOfPassengers": 290,
-      "reachingVia": "Orchard"
-    }
+    "line": "red",
+    "totalNumOfPassengers": 290,
+    "reachingVia": "Orchard"
   },
   "score": 30
 }

@@ -145,11 +145,9 @@
     ]
   },
   "output": {
-    "busiestRoute": {
-      "line": "purple",
-      "totalNumOfPassengers": 290,
-      "reachingVia": "HarbourFront"
-    }
+    "line": "purple",
+    "totalNumOfPassengers": 290,
+    "reachingVia": "HarbourFront"
   },
   "score": 20
 }

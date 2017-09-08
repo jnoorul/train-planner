@@ -145,11 +145,9 @@
     ]
   },
   "output": {
-    "busiestRoute": {
-      "line": "purple",
-      "totalNumOfPassengers": 190,
-      "reachingVia": "LittleIndia"
-    }
+    "line": "purple",
+    "totalNumOfPassengers": 190,
+    "reachingVia": "LittleIndia"
   },
   "score": 20
 }
