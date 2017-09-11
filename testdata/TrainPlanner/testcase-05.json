@@ -5,6 +5,17 @@
     "destination": "DhobyGhaut",
     "stations": [
       {
+        "name": "Somerset",
+        "passengers": 0,
+        "connectedStations": [
+          "Orchard",
+          "Novena"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+      {
         "name": "Punggol",
         "passengers": 80,
         "connectedStations": [
@@ -23,6 +34,17 @@
         ],
         "lines": [
           "purple"
+        ]
+      },
+      {
+        "name": "Esplanade",
+        "passengers": 0,
+        "connectedStations": [
+          "DhobyGhaut",
+          "PayaLebar"
+        ],
+        "lines": [
+          "circle"
         ]
       },
       {
@@ -58,7 +80,7 @@
           "HarbourFront",
           "MarinaBay",
           "Orchard",
-          "PayaLebar"
+          "Esplanade"
         ],
         "lines": [
           "purple",
@@ -80,7 +102,7 @@
         "name": "Orchard",
         "passengers": 30,
         "connectedStations": [
-          "DhobyGhaut",
+          "Somerset",
           "Novena"
         ],
         "lines": [
@@ -91,7 +113,7 @@
         "name": "Novena",
         "passengers": 10,
         "connectedStations": [
-          "Orchard",
+          "Somerset",
           "Bishan"
         ],
         "lines": [
@@ -135,7 +157,7 @@
         "name": "PayaLebar",
         "passengers": 275,
         "connectedStations": [
-          "DhobyGhaut",
+          "Esplanade",
           "Serangoon"
         ],
         "lines": [
@@ -147,7 +169,7 @@
   "output": {
     "line": "circle",
     "totalNumOfPassengers": 275,
-    "reachingVia": "PayaLebar"
+    "reachingVia": "Esplanade"
   },
   "score": 20
 }

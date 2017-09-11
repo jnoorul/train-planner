@@ -58,7 +58,7 @@
           "HarbourFront",
           "MarinaBay",
           "Orchard",
-          "PayaLebar"
+          "Esplanade"
         ],
         "lines": [
           "purple",
@@ -81,7 +81,7 @@
         "passengers": 150,
         "connectedStations": [
           "DhobyGhaut",
-          "Novena"
+          "Somerset"
         ],
         "lines": [
           "red"
@@ -91,7 +91,7 @@
         "name": "Novena",
         "passengers": 140,
         "connectedStations": [
-          "Orchard",
+          "Somerset",
           "Bishan"
         ],
         "lines": [
@@ -132,10 +132,33 @@
         ]
       },
       {
+        "name": "Esplanade",
+        "passengers": 0,
+        "connectedStations": [
+          "DhobyGhaut",
+          "PayaLebar"
+        ],
+        "lines": [
+          "circle"
+        ]
+      },
+      {
+        "name": "Somerset",
+        "passengers": 0,
+        "connectedStations": [
+          "Orchard",
+          "Novena"
+        ],
+        "lines": [
+          "red"
+        ]
+      },
+
+      {
         "name": "PayaLebar",
         "passengers": 75,
         "connectedStations": [
-          "DhobyGhaut",
+          "Esplanade",
           "Serangoon"
         ],
         "lines": [
