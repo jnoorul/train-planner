@@ -225,6 +225,12 @@ Your application should find the busiest train route and output the below
             "reachingVia": "LittleIndia"             
 }
 
+
+## Explanation
+![Alt text](public/images/MrtMap.jpg?raw=true "Title")
+
+
 ## Endpoint Details
 
 Please implement your solution by creating a new endpoint https://xxxx.com/trainPlanner 
+
