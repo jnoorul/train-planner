@@ -66,16 +66,20 @@ export default class TrainPlannerEvaluator {
       if (randomNumbers.includes(testCases[i].groupId)) {
         const result = { name: testCases[i].name };
         try {
+          console.log(`calling ${this.teamUrl}/trainPlanner for test case ${testCases[i].input}`);
           const output = await execute(this.teamUrl, testCases[i].input);
           if (isEqual(output, testCases[i].output)) {
+            console.log('testcase passed');
             result.status = 'PASS';
             result.score = testCases[i].score;
             totalScore += testCases[i].score;
           } else {
+            console.log('testcase failed');
             result.status = 'FAIL';
             result.score = 0;
           }
         } catch (err) {
+          console.log(`exception occured while testing the solution:${err}`);
           result.status = 'FAIL';
           result.score = 0;
         }
