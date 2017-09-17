@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import express from 'express';
 import validateRequest from './RequestValidator';
 import getEvaluator from '../evaluation/EvaluatorFactory';
@@ -15,6 +16,7 @@ router.get('/instructions', (req, res) => {
 });
 
 router.post('/evaluate', (req, res) => {
+  console.log(`evaluate request received with ${req.body}`);
   const errors = validateRequest(req);
   if (errors.length === 0) {
     const evaluator = getEvaluator('TrainPlanner', req.body, new TestStore());
@@ -25,6 +27,7 @@ router.post('/evaluate', (req, res) => {
     });
     res.json('request received');
   } else {
+    console.log(`evaluate request received with incorrect input ${errors}`);
     res.statusCode = '400';
     res.json({ errors });
   }
