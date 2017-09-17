@@ -1,8 +1,7 @@
 {
-  "name": "ComplexRouteMap",
+  "name": "SimpleRouteMap",
   "groupId": 1,
   "input": {
-
     "destination": "DhobyGhaut",
     "stations": [{
       "name": "Punggol",
@@ -10,11 +9,8 @@
       "connections": [{
         "station": "Sengkang",
         "line": "purple"
-      }
-      ]
-
+      }]
     }, {
-
       "name": "Sengkang",
       "passengers": 40,
       "connections": [{
@@ -23,11 +19,8 @@
       }, {
         "station": "Serangoon",
         "line": "purple"
-      }
-      ]
-
+      }]
     }, {
-
       "name": "Serangoon",
       "passengers": 40,
       "connections": [{
@@ -42,10 +35,8 @@
       }, {
         "station": "Bishan",
         "line": "orange"
-      }
-      ]
+      }]
     }, {
-
       "name": "LittleIndia",
       "passengers": 40,
       "connections": [{
@@ -54,10 +45,8 @@
       }, {
         "station": "DhobyGhaut",
         "line": "purple"
-      },
-      ]
+      }]
     }, {
-
       "name": "DhobyGhaut",
       "passengers": 20,
       "connections": [{
@@ -75,19 +64,14 @@
       }, {
         "station": "Esplanade",
         "line": "orange"
-      }
-      ]
-
+      }]
     }, {
-
       "name": "HarbourFront",
       "passengers": 90,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "purple"
-      }
-      ]
-
+      }]
     }, {
       "name": "Somerset",
       "passengers": 0,
@@ -97,9 +81,7 @@
       }, {
         "station": "Orchard",
         "line": "red"
-      }
-      ]
-
+      }]
     }, {
       "name": "Orchard",
       "passengers": 30,
@@ -109,9 +91,7 @@
       }, {
         "station": "Novena",
         "line": "red"
-      }
-      ]
-
+      }]
     }, {
       "name": "Novena",
       "passengers": 10,
@@ -121,9 +101,7 @@
       }, {
         "station": "Bishan",
         "line": "red"
-      }
-      ]
-
+      }]
     }, {
       "name": "Bishan",
       "passengers": 20,
@@ -136,26 +114,21 @@
       }, {
         "station": "Serangoon",
         "line": "orange"
-      }
-      ]
-
+      }]
     }, {
       "name": "Woodlands",
       "passengers": 40,
       "connections": [{
         "station": "Bishan",
         "line": "red"
-      }
-      ]
-
+      }]
     }, {
       "name": "MarinaBay",
       "passengers": 100,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "red"
-      }
-      ]
+      }]
     }, {
       "name": "Esplanade",
       "passengers": 0,
@@ -165,8 +138,7 @@
       }, {
         "station": "PayaLebar",
         "line": "orange"
-      }
-      ]
+      }]
     }, {
       "name": "PayaLebar",
       "passengers": 75,
@@ -176,15 +148,13 @@
       }, {
         "station": "Serangoon",
         "line": "orange"
-      }
-      ]
-    }
-    ]
+      }]
+    }]
   },
   "output": {
-      "line": "purple",
-      "totalNumOfPassengers": 260,
-      "reachingVia": "LittleIndia"
+    "line": "purple",
+    "totalNumOfPassengers": 260,
+    "reachingVia": "LittleIndia"
   },
-  "score": 30
+  "score": 20
 }
