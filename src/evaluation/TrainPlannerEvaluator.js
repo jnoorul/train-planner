@@ -59,7 +59,8 @@ export default class TrainPlannerEvaluator {
 
     let totalScore = 0;
     const testCasesOutput = [];
-    const randomNumbers = TrainPlannerEvaluator.generatePairOfRandomInt(1, 8);
+    // const randomNumbers = TrainPlannerEvaluator.generatePairOfRandomInt(1, 8);
+    const randomNumbers = [1, 1];
 
     for (let i = 0; i < testCases.length; i += 1) {
       if (randomNumbers.includes(testCases[i].groupId)) {
