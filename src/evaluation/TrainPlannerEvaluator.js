@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { isEqual } from 'lodash';
 import execute from '../service/trainPlannerService';
 import postResults from '../service/coordinatorService';
@@ -59,14 +60,13 @@ export default class TrainPlannerEvaluator {
 
     let totalScore = 0;
     const testCasesOutput = [];
-    // const randomNumbers = TrainPlannerEvaluator.generatePairOfRandomInt(1, 8);
-    const randomNumbers = [1, 1];
+    const randomNumbers = TrainPlannerEvaluator.generatePairOfRandomInt(1, 8);
 
     for (let i = 0; i < testCases.length; i += 1) {
       if (randomNumbers.includes(testCases[i].groupId)) {
         const result = { name: testCases[i].name };
         try {
-          console.log(`calling ${this.teamUrl}/trainPlanner for test case ${testCases[i].input}`);
+          console.log(`calling ${this.teamUrl}/trainPlanner for test case ${testCases[i].name}`);
           const output = await execute(this.teamUrl, testCases[i].input);
           if (isEqual(output, testCases[i].output)) {
             console.log('testcase passed');
