@@ -4,7 +4,6 @@
    Singapore's Land Transport Authority needs your help to come up with an application which will help them to find the busiest train route during special events like National Day, New Year Eve and Singapore Air show, etc.
 
 
-
 ## Input:
 
  
@@ -29,6 +28,11 @@ Your application should find the busiest train route and output the below
 
 3) Total number of passengers travelled in the above line and direction.
     
+## Endpoint
+
+Please implement your solution by creating a new endpoint https://xxxx.com/trainPlanner.
+For evaluation we will hit your endpoint once for every test case.
+
 
 ## Sample Input:
 
@@ -214,8 +218,6 @@ Your application should find the busiest train route and output the below
 }
 
 
-
-
 ## Sample Output:
 
 {
@@ -227,10 +229,38 @@ Your application should find the busiest train route and output the below
 
 
 ## Explanation
+
+Visual representation of the above sample Input:
+
 ![Alt text](public/images/MrtMap.jpg?raw=true "Title")
 
+For the sample input, the destination is given as "Dhboy Ghaut". All the passengers waiting in each station will travel to the Dhoby Ghaut using the shortest path.
 
-## Endpoint Details
+Passenger will reach Dhoby Ghaut via one of the below station,
 
-Please implement your solution by creating a new endpoint https://xxxx.com/trainPlanner 
+* via LittleIndia using Purple line
+* via HarbourFront using Purple line
+* via Esplanade using  using Orange line
+* via Somerset using Red line
+* via MarinaBay using Red line
+
+For each of the above option, you need to find the total number of passengers and output the station and line which carries maximum number of passengers.  
+For the sample input, total of 260 passengers will be reaching Dhoby Ghaut via Little India using purple line.  
+
+
+**Punggol (80)  -> Sengkang (40) ->**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Serangoon (40) -> LittleIndia (40) -> Dhoby Ghaut**  
+**Woodlands(40) -> Bishan (20)   ->**  
+ 
+
+
+
+
+
+
+
+
+
 
