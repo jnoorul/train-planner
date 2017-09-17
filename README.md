@@ -22,7 +22,7 @@ From source to destination, if there are more than one route to choose, passenge
 
 Your application should find the busiest train route and output the below
 
-1) Train Line (red or purple or circle)
+1) Train Line (red or purple or orange)
 
 2) Direction (reaching the destination via. i.e the previous station before the destination)
 
@@ -35,6 +35,15 @@ For evaluation we will hit your endpoint once for every test case.
 
 
 ## Sample Input:
+
+The HTTP POST request will come with a body of Content-Type: application/json.
+
+**Limits**
+
+ * Number Of Passengers will be between 0 to 1000 (inclusive)
+ * Total number of stations will be between 2 and 50 (inclusive)
+ * HTTP request timeout: 5s  
+
 
 {
 
@@ -219,6 +228,7 @@ For evaluation we will hit your endpoint once for every test case.
 
 
 ## Sample Output:
+The expected HTTP response should come with a body of Content-Type: application/json  
 
 {
 
@@ -236,7 +246,7 @@ Visual representation of the above sample Input:
 
 For the sample input, the destination is given as "Dhoby Ghaut". All the passengers waiting in each station will travel to the Dhoby Ghaut using the shortest path.
 
-Passenger will reach Dhoby Ghaut via one of the below station,
+Passenger will reach Dhoby Ghaut using one of the below routes,
 
 * via LittleIndia using Purple line
 * via HarbourFront using Purple line
@@ -244,8 +254,10 @@ Passenger will reach Dhoby Ghaut via one of the below station,
 * via Somerset using Red line
 * via MarinaBay using Red line
 
-For each of the above option, you need to find the total number of passengers and output the station and line which carries maximum number of passengers.  
-For the sample input, total of 260 passengers will be reaching Dhoby Ghaut via Little India using purple line.  
+For each of the above option, you need to find the total number of passengers and the route which carries the maximum number of passengers should be your final output.
+
+For the given sample input, purple line reaching Dhoby Ghaut via LittleIndia station will carry maximum number of passengers. 
+Total of 260 passengers will be reaching Dhoby Ghaut via Little India using purple line.  
 
 
 **Punggol (80)  -> Sengkang (40) ->**  
