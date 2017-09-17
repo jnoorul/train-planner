@@ -11,7 +11,7 @@
 
 2) Destination where the event is happening
 
-3) Number of people waiting in each station to participate in the event.
+3) Number of passengers waiting in each station to participate in the event happening at the destination.
 
 
 ## Assumption:
@@ -30,7 +30,7 @@ Your application should find the busiest train route and output the below
     
 ## Endpoint
 
-Please implement your solution by creating a new endpoint https://xxxx.com/trainPlanner.
+Please implement your solution by creating a new POST endpoint https://xxxx.com/trainPlanner.
 For evaluation we will hit your endpoint once for every test case.
 
 
@@ -234,7 +234,7 @@ Visual representation of the above sample Input:
 
 ![Alt text](public/images/MrtMap.jpg?raw=true "Title")
 
-For the sample input, the destination is given as "Dhboy Ghaut". All the passengers waiting in each station will travel to the Dhoby Ghaut using the shortest path.
+For the sample input, the destination is given as "Dhoby Ghaut". All the passengers waiting in each station will travel to the Dhoby Ghaut using the shortest path.
 
 Passenger will reach Dhoby Ghaut via one of the below station,
 
