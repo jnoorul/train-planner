@@ -1,9 +1,22 @@
 {
-  "name": "SimpleRouteMap",
+  "name": "SimpleRouteMap-2",
   "groupId": 2,
   "input": {
     "destination": "DhobyGhaut",
-    "stations": [{
+    "stations": [
+    {
+      "name": "Novena",
+      "passengers": 10,
+      "connections": [{
+        "station": "Orchard",
+        "line": "red"
+      }, {
+        "station": "Bishan",
+        "line": "red"
+      }
+      ]
+    }, 
+    {
       "name": "Punggol",
       "passengers": 80,
       "connections": [{
@@ -98,17 +111,6 @@
         "line": "red"
       }, {
         "station": "Novena",
-        "line": "red"
-      }
-      ]
-    }, {
-      "name": "Novena",
-      "passengers": 10,
-      "connections": [{
-        "station": "Orchard",
-        "line": "red"
-      }, {
-        "station": "Bishan",
         "line": "red"
       }
       ]

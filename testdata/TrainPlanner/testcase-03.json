@@ -1,8 +1,8 @@
 {
-  "name": "SimpleRouteMap",
+  "name": "SimpleRouteMap-3",
   "groupId": 3,
   "input": {
-    "destination": "DhobyGhaut",
+    "destination": "Serangoon",
     "stations": [{
       "name": "Punggol",
       "passengers": 80,
@@ -20,6 +20,21 @@
       }, {
         "station": "Serangoon",
         "line": "purple"
+      }
+      ]
+    },
+    {
+      "name": "Bishan",
+      "passengers": 20,
+      "connections": [{
+        "station": "Novena",
+        "line": "red"
+      }, {
+        "station": "Woodlands",
+        "line": "red"
+      }, {
+        "station": "Serangoon",
+        "line": "orange"
       }
       ]
     }, {
@@ -112,21 +127,7 @@
         "line": "red"
       }
       ]
-    }, {
-      "name": "Bishan",
-      "passengers": 20,
-      "connections": [{
-        "station": "Novena",
-        "line": "red"
-      }, {
-        "station": "Woodlands",
-        "line": "red"
-      }, {
-        "station": "Serangoon",
-        "line": "orange"
-      }
-      ]
-    }, {
+    },  {
       "name": "Woodlands",
       "passengers": 40,
       "connections": [{

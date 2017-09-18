@@ -1,5 +1,5 @@
 {
-  "name": "SimpleRouteMap",
+  "name": "SimpleRouteMap-4",
   "groupId": 4,
   "input": {
     "destination": "DhobyGhaut",
@@ -8,6 +8,14 @@
       "passengers": 80,
       "connections": [{
         "station": "Sengkang",
+        "line": "purple"
+      }
+      ]
+    },{
+      "name": "HarbourFront",
+      "passengers": 90,
+      "connections": [{
+        "station": "DhobyGhaut",
         "line": "purple"
       }
       ]
@@ -69,14 +77,6 @@
       }, {
         "station": "Esplanade",
         "line": "orange"
-      }
-      ]
-    }, {
-      "name": "HarbourFront",
-      "passengers": 90,
-      "connections": [{
-        "station": "DhobyGhaut",
-        "line": "purple"
       }
       ]
     }, {
