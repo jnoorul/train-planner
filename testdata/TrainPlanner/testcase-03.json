@@ -2,7 +2,7 @@
   "name": "SimpleRouteMap-3",
   "groupId": 3,
   "input": {
-    "destination": "Serangoon",
+    "destination": "DhobyGhaut",
     "stations": [{
       "name": "Punggol",
       "passengers": 80,
@@ -23,21 +23,7 @@
       }
       ]
     },
-    {
-      "name": "Bishan",
-      "passengers": 20,
-      "connections": [{
-        "station": "Novena",
-        "line": "red"
-      }, {
-        "station": "Woodlands",
-        "line": "red"
-      }, {
-        "station": "Serangoon",
-        "line": "orange"
-      }
-      ]
-    }, {
+     {
       "name": "Serangoon",
       "passengers": 40,
       "connections": [{
@@ -46,12 +32,6 @@
       }, {
         "station": "Sengkang",
         "line": "purple"
-      }, {
-        "station": "PayaLebar",
-        "line": "orange"
-      }, {
-        "station": "Bishan",
-        "line": "orange"
       }
       ]
     }, {
@@ -76,9 +56,6 @@
         "station": "HarbourFront",
         "line": "purple"
       }, {
-        "station": "Somerset",
-        "line": "red"
-      }, {
         "station": "MarinaBay",
         "line": "red"
       }, {
@@ -92,47 +69,6 @@
       "connections": [{
         "station": "DhobyGhaut",
         "line": "purple"
-      }
-      ]
-    }, {
-      "name": "Somerset",
-      "passengers": 0,
-      "connections": [{
-        "station": "DhobyGhaut",
-        "line": "red"
-      }, {
-        "station": "Orchard",
-        "line": "red"
-      }
-      ]
-    }, {
-      "name": "Orchard",
-      "passengers": 30,
-      "connections": [{
-        "station": "Somerset",
-        "line": "red"
-      }, {
-        "station": "Novena",
-        "line": "red"
-      }
-      ]
-    }, {
-      "name": "Novena",
-      "passengers": 10,
-      "connections": [{
-        "station": "Orchard",
-        "line": "red"
-      }, {
-        "station": "Bishan",
-        "line": "red"
-      }
-      ]
-    },  {
-      "name": "Woodlands",
-      "passengers": 40,
-      "connections": [{
-        "station": "Bishan",
-        "line": "red"
       }
       ]
     }, {
@@ -169,9 +105,9 @@
     ]
   },
   "output": {
-    "line": "orange",
-    "totalNumOfPassengers": 285,
-    "reachingVia": "PayaLebar"
+    "line": "purple",
+    "totalNumOfPassengers": 200,
+    "reachingVia": "LittleIndia"
   },
   "score": 10
 }
