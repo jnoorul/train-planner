@@ -1,6 +1,6 @@
 {
-  "name": "SimpleRouteMap-6",
-  "groupId": 6,
+  "name": "SimpleRouteMap-5",
+  "groupId": 5,
   "input": {
     "destination": "DhobyGhaut",
     "stations": [{
@@ -69,6 +69,10 @@
       }, {
         "station": "Esplanade",
         "line": "orange"
+      },
+      {
+        "station": "Expo",
+        "line": "blue"
       }
       ]
     }, {
@@ -81,7 +85,7 @@
       ]
     }, {
       "name": "Somerset",
-      "passengers": 0,
+      "passengers": 25,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "red"
@@ -144,7 +148,7 @@
       ]
     }, {
       "name": "Esplanade",
-      "passengers": 0,
+      "passengers": 20,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "orange"
@@ -153,7 +157,29 @@
         "line": "orange"
       }
       ]
-    }, {
+    }, 
+    {
+      "name": "Expo",
+      "passengers": 20,
+      "connections": [{
+        "station": "DhobyGhaut",
+        "line": "blue"
+      }, {
+        "station": "Changi",
+        "line": "green"
+      }
+      ]
+    },
+    {
+      "name": "Changi",
+      "passengers": 300,
+      "connections": [{
+        "station": "Expo",
+        "line": "green"
+      }
+      ]
+    },
+    {
       "name": "PayaLebar",
       "passengers": 75,
       "connections": [{
@@ -168,9 +194,9 @@
     ]
   },
   "output": {
-    "line": "purple",
-    "totalNumOfPassengers": 260,
-    "reachingVia": "LittleIndia"
+    "line": "blue",
+    "totalNumOfPassengers": 320,
+    "reachingVia": "Expo"
   },
   "score": 20
 }
