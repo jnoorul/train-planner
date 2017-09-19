@@ -1,15 +1,72 @@
 {
-  "name": "SimpleRouteMap-16",
+  "name": "ComplexRouteMap-16",
   "groupId": 8,
   "input": {
     "destination": "DhobyGhaut",
-    "stations": [{
+    "stations": [
+    {
+      "name": "Cove",
+      "passengers": 10,
+      "connections": [{
+        "station": "Punggol",
+        "line": "lrt"
+      },
+      {
+        "station": "Meridien",
+        "line": "lrt"
+      }]
+    },
+    {
+      "name": "Meridien",
+      "passengers": 10,
+      "connections": [{
+        "station": "Cove",
+        "line": "lrt"
+      },
+      {
+        "station": "CoralEdge",
+        "line": "lrt"
+      }]
+    },
+    {
+      "name": "CoralEdge",
+      "passengers": 10,
+      "connections": [{
+        "station": "Meridien",
+        "line": "lrt"
+      },
+      {
+        "station": "Riviera",
+        "line": "lrt"
+      }]
+    },
+    {
+      "name": "Riviera",
+      "passengers": 10,
+      "connections": [{
+        "station": "Punggol",
+        "line": "lrt"
+      },
+      {
+        "station": "CoralEdge",
+        "line": "lrt"
+      }]
+    },
+    {
       "name": "Punggol",
       "passengers": 80,
       "connections": [{
         "station": "Sengkang",
         "line": "purple"
-      }]
+      },{
+        "station": "Riviera",
+        "line": "lrt"
+      },
+      {
+        "station": "Cove",
+        "line": "lrt"
+      }
+      ]
     }, {
       "name": "Sengkang",
       "passengers": 40,
@@ -153,7 +210,7 @@
   },
   "output": {
     "line": "purple",
-    "totalNumOfPassengers": 260,
+    "totalNumOfPassengers": 300,
     "reachingVia": "LittleIndia"
   },
   "score": 30
