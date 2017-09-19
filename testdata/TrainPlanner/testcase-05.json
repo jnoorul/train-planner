@@ -2,7 +2,7 @@
   "name": "SimpleRouteMap-5",
   "groupId": 5,
   "input": {
-    "destination": "DhobyGhaut",
+    "destination": "PayaLebar",
     "stations": [{
       "name": "Punggol",
       "passengers": 80,
@@ -81,7 +81,7 @@
       ]
     }, {
       "name": "Somerset",
-      "passengers": 0,
+      "passengers": 25,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "red"
@@ -144,7 +144,7 @@
       ]
     }, {
       "name": "Esplanade",
-      "passengers": 0,
+      "passengers": 20,
       "connections": [{
         "station": "DhobyGhaut",
         "line": "orange"
@@ -168,9 +168,9 @@
     ]
   },
   "output": {
-    "line": "purple",
-    "totalNumOfPassengers": 260,
-    "reachingVia": "LittleIndia"
+    "line": "orange",
+    "totalNumOfPassengers": 285,
+    "reachingVia": "Esplanade"
   },
   "score": 20
 }
