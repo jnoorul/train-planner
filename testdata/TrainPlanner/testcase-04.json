@@ -2,7 +2,7 @@
   "name": "SimpleRouteMap-4",
   "groupId": 4,
   "input": {
-    "destination": "DhobyGhaut",
+    "destination": "HarbourFront",
     "stations": [{
       "name": "Punggol",
       "passengers": 80,
@@ -169,8 +169,8 @@
   },
   "output": {
     "line": "purple",
-    "totalNumOfPassengers": 260,
-    "reachingVia": "LittleIndia"
+    "totalNumOfPassengers": 495,
+    "reachingVia": "DhobyGhaut"
   },
   "score": 20
 }
