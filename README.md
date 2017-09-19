@@ -242,7 +242,7 @@ The expected HTTP response should come with a body of Content-Type: application/
 
 Visual representation of the above sample Input:
 
-![Alt text](public/images/MrtMap.jpg?raw=true "Title")
+![Alt text](public/images/mrtmap.png?raw=true "Title")
 
 For the sample input, the destination is given as "Dhoby Ghaut". All the passengers waiting in each station will travel to the Dhoby Ghaut using the shortest path.
 
