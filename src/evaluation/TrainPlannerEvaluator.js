@@ -81,6 +81,7 @@ export default class TrainPlannerEvaluator {
         } catch (err) {
           console.log(`exception occured while testing the solution:${err}`);
           result.status = 'FAIL';
+          result.error = err;
           result.score = 0;
         }
         testCasesOutput.push(result);
@@ -88,7 +89,7 @@ export default class TrainPlannerEvaluator {
     }
 
     return {
-      message: this.getOverAllStatus(testCasesOutput),
+      message: JSON.stringify(testCasesOutput),
       runId: this.runId.toString(),
       score: totalScore.toString(),
       testCases: testCasesOutput,
