@@ -1,7 +1,7 @@
 import 'isomorphic-fetch';
 
 export default async function execute(url, input) {
-  const urlWithoutSlash = url.replace(/\/$/, '');
+  const urlWithoutSlash = url.replace(/\/+$/, '');
   const problemUrl = `${urlWithoutSlash}/trainPlanner`;
   const response = await fetch(problemUrl, {
     method: 'post',

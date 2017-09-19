@@ -77,6 +77,7 @@ export default class TrainPlannerEvaluator {
             console.log('testcase failed');
             result.status = 'FAIL';
             result.score = 0;
+            result.error = `your result "${JSON.stringify(output)}" did not match expected result`;
           }
         } catch (err) {
           console.log(`exception occured while testing the solution:${err}`);
